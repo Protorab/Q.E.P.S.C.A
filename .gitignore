@@ -1,0 +1,6 @@
+/node_modules/
+/Q.E.P.S.C.A/
+/.git/
+/**/Thumbs.db
+/**/*.DS_Store
+/**/package-lock.json

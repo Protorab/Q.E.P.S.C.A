@@ -1,0 +1,127 @@
+
+include includes/head.pug
+body
+  .wrapper
+
+    include includes/header.pug
+    main.page(role='main')
+      .page__wrapper
+        .page__screen.screen
+          .lines
+          .noise
+          .screen__content.screen__content-bg
+            h1.t1.screen__title(
+            data-swiper-parallax="50%",
+            data-swiper-parallax-opacity="0"
+            ) Q.E.P.S.C.A
+            .screen__text.screen__text-white(
+            data-swiper-parallax="-100%",
+            data-swiper-parallax-opacity="0",
+            data-swiper-parallax-duration="900"
+            )
+              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora repudiandae dolorem praesentium, numquam distinctio id tenetur accusamus eaque nobis mollitia explicabo repellendus corporis omnis voluptatum asperiores nesciunt molestias iure quisquam?
+          .screen__body
+            .screen__bg
+              video(
+                playsinline,
+                autoplay,
+                muted,
+                loop,
+                data-swiper-parallax-scale="1.8",
+                data-swiper-parallax="50%"
+              )
+                source(
+                  src="assets/video/top__bg.mp4",
+                  type="video/mp4",
+                  alt="Видео",
+                  
+                  )
+        .page__screen.screen
+          .screen__content
+            h1.screen__title.screen__title(
+            data-swiper-parallax="-100%",
+            data-swiper-parallax-opacity="0",
+            data-swiper-parallax-duration="1000"
+            ) Проекты 
+            .screen__text(
+            data-swiper-parallax="-100%",
+            data-swiper-parallax-opacity="0",
+            data-swiper-parallax-duration="900"
+            ) 
+              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora repudiandae dolorem praesentium, numquam distinctio id tenetur accusamus eaque nobis mollitia explicabo repellendus corporis omnis voluptatum asperiores nesciunt molestias iure quisquam?
+        .page__screen.screen
+          .lines
+          .noise
+          .screen__content
+            h1.screen__title.screen__title-bg(
+            data-swiper-parallax="70%",
+            data-swiper-parallax-opacity="0",
+            data-swiper-parallax-duration="700"
+            ) Skills
+          .screen__body
+            .screen__bg
+              .overlay
+              noscript.loading-lazy
+                img(
+                  loading="lazy"
+                  src="img/img_2.jpg",
+                  alt="Картинка", 
+                  data-swiper-parallax-scale="1.5",
+                  data-swiper-parallax="50%"
+                  )
+        .page__screen.screen
+          .screen__content
+            h1.screen__title.screen__title(
+            data-swiper-parallax="-70%",
+            data-swiper-parallax-opacity="0",
+            data-swiper-parallax-duration="900"
+            ) Lorem ipsum dolor
+            .screen__text(
+            data-swiper-parallax="-65%",
+            data-swiper-parallax-opacity="0",
+            data-swiper-parallax-duration="900"
+            )
+              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora repudiandae dolorem praesentium, numquam distinctio id tenetur accusamus eaque nobis mollitia explicabo repellendus corporis omnis voluptatum asperiores nesciunt molestias iure quisquam?
+        
+        .page__screen.screen
+          .screen__content.screen__content-bg
+            h1.screen__title.screen__title(
+            data-swiper-parallax="-70%",
+            data-swiper-parallax-opacity="0",
+            data-swiper-parallax-duration="900"
+            ) Lorem ipsum dolor
+            .screen__text(
+            data-swiper-parallax="-65%",
+            data-swiper-parallax-opacity="0",
+            data-swiper-parallax-duration="900"
+            )
+              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora repudiandae dolorem praesentium, numquam distinctio id tenetur accusamus eaque nobis mollitia explicabo repellendus corporis omnis voluptatum asperiores nesciunt molestias iure quisquam?
+          .screen__body
+            .lines
+            .noise
+            .screen__bg
+              video(
+                playsinline,
+                autoplay,
+                muted,
+                loop
+              )
+                source(
+                  src="assets/video/contacts.mp4",
+                  type="video/mp4",
+                  alt="Видео",
+                  data-swiper-parallax-scale="1.8",
+                  data-swiper-parallax="33%"
+                  )
+      .link__wrap
+              a.contact__icon(href="https://t.me/Lea_need") 
+                i.fab.fa-telegram-plane
+              a.contact__icon.contact__icon-desktop(href="viber://chat?number=+375259085861") 
+                i.fab.fa-viber
+              a.contact__icon.contact__icon-mobile(href="viber://add?number=375259085861")
+                i.fab.fa-viber
+              a.contact__icon(href="tel:+375259085861")
+                i.fas.fa-mobile-alt
+      .page__pagination
+      .page__scroll    
+    include includes/footer.pug
