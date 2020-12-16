@@ -1,9 +1,9 @@
 /** @format */
 
-import $ from "jquery";
+// import $ from "jquery";
 // import particles from "particles.js";
-window.jQuery = $;
-window.$ = $;
+// window.jQuery = $;
+// window.$ = $;
 // import wow from "wowjs";
 import Swiper from "./vendor/swiper-bundle.min.js";
 import inputmask from "inputmask";
@@ -24,8 +24,8 @@ phoneMask.mask(phone);
 
 // window.wow = new WOW.WOW();
 // window.wow.init();
-window.jQuery = $;
-window.$ = $;
+// window.jQuery = $;
+// window.$ = $;
 
 // import module example (npm i -D jquery)
 // particlesJS.load(
@@ -36,17 +36,18 @@ window.$ = $;
 //   }
 // );
 document.addEventListener("DOMContentLoaded", () => {
-  const icon = document.querySelector(".icon");
-  const menu = document.querySelector(".menu");
-  const frame = document.querySelector(".frame");
-  const popupForm = document.querySelector("#popup__form");
+  const popupProject = document.querySelector(".popup__project");
+  const projectPreview = document.querySelector(".project__preview");
+  const projectPreviewImg = document.querySelector("#project__img");
+  const showProject = document.querySelectorAll(".show__project");
+  const popupForm = document.querySelector(".popup__form");
   const formPopup = document.querySelector(".form__popup");
-  const popupBg = document.querySelector(".popup-bg");
-  // const showForm = document.querySelectorAll(".show__form");
-  const closeForm = document.querySelector(".close__form");
+  const popupBg = document.querySelectorAll(".popup__overlay");
+  const showForm = document.querySelectorAll(".show__form");
+  const closePopup = document.querySelectorAll(".close");
   const body = document.querySelector("body");
 
-  function FormToggle(
+  function popupToggle(
     el1,
     el2,
     el1ShowClass,
@@ -61,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     body.classList.toggle("__fixed");
   }
   function formShow() {
-    FormToggle(
+    popupToggle(
       popupForm,
       formPopup,
       "animate__fadeIn",
@@ -74,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 100);
   }
   function formHide() {
-    FormToggle(
+    popupToggle(
       popupForm,
       formPopup,
       "animate__fadeOut",
@@ -86,29 +87,77 @@ document.addEventListener("DOMContentLoaded", () => {
       popupForm.style.display = "none";
     }, 1000);
   }
-  popupBg.addEventListener("click", function (e) {
-    e.preventDefault();
-    formHide();
+  showForm.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      let subject = this.dataset.subject;
+      console.log(subject);
+      e.preventDefault();
+      formShow();
+    });
   });
-  closeForm.addEventListener("click", function (e) {
-    e.preventDefault();
-    formHide();
+  function projectShow() {
+    popupToggle(
+      popupProject,
+      projectPreview,
+      "animate__fadeIn",
+      "animate__bounceIn",
+      "animate__fadeOut",
+      "animate__bounceOut"
+    );
+    setTimeout(function FormFadeIn() {
+      popupProject.style.display = "flex";
+    }, 100);
+  }
+  function projectHide() {
+    popupToggle(
+      popupProject,
+      projectPreview,
+      "animate__fadeOut",
+      "animate__bounceOut",
+      "animate__fadeIn",
+      "animate__bounceIn"
+    );
+    setTimeout(function FormFadeOut() {
+      popupProject.style.display = "none";
+    }, 1000);
+  }
+  function popupHide() {
+    if (window.getComputedStyle(popupForm).display === "flex") {
+      formHide();
+    }
+    if (window.getComputedStyle(popupProject).display === "flex") {
+      projectHide();
+    }
+  }
+  showProject.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      let preview = this.dataset.preview;
+      projectPreviewImg.src = preview;
+      console.log(preview);
+      projectShow();
+      e.preventDefault();
+    });
+  });
+
+  popupBg.forEach(function (closeBtn) {
+    closeBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      popupHide();
+    });
+  });
+  closePopup.forEach(function (close) {
+    close.addEventListener("click", function (e) {
+      popupHide();
+      e.preventDefault();
+    });
   });
   document.addEventListener("keydown", function (event) {
     if (event.keyCode === 27) {
-      formHide();
+      popupHide();
     }
   });
-  // $(document).ready(function () {
-  //   $(".show__form").on("click", function () {
-  //     let subject = $(this).data("subject");
-  //     $("#popup__subject").val(subject);
-  //     formShow();
-  //   });
-  // });
 
   const wrapper = document.querySelector(".wrapper");
-
   const pageSlider = new Swiper(".page", {
     // переопределить классы
     wrapperClass: "page__wrapper",
@@ -203,4 +252,40 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   pageSlider.init();
+  new Swiper(".project", {
+    effect: "cube",
+    rtl: true,
+    cubeEffect: {
+      shadow: true,
+      slideShadows: true,
+      shadowOffset: 20,
+      shadowScale: 0.94,
+    },
+    // direction: "vertical",
+    speed: 800,
+    // spaceBetween: 100,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+  });
+  new Swiper(".project__vertical", {
+    effect: "cube",
+
+    cubeEffect: {
+      shadow: true,
+      slideShadows: true,
+      shadowOffset: 20,
+      shadowScale: 0.94,
+    },
+    direction: "vertical",
+    speed: 800,
+    // spaceBetween: 100,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+  });
 });

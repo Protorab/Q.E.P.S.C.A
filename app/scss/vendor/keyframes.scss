@@ -128,13 +128,17 @@
   }
 }
 
-@keyframes blink {
-  0% {
-    -webkit-text-stroke-color: #fff;
+@keyframes rec__blink {
 
+  0% {
+    background: #646464;
+    box-shadow: 0 0 4px #1C1C17;
   }
 
+
   100% {
-    -webkit-text-stroke-color: rgba(255, 255, 255, 0);
+    background: #FF4F4F;
+    box-shadow: 0 0 4px #1C1C17,
+      0 0 5px #FF4242;
   }
 }

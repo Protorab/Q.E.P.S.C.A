@@ -57,7 +57,10 @@ const path = {
 
 function browsersync() {
   browserSync.init({
-    server: { baseDir: "./" + distFolder + "/" },
+    server: {
+      baseDir: "./" + distFolder + "/",
+    },
+    
     notify: false,
     online: true,
   });
@@ -133,11 +136,13 @@ function images() {
     .pipe(dest(path.build.img))
     .pipe(browserSync.stream());
 }
+
 function assets() {
   return src(path.src.assets)
     .pipe(dest(path.build.assets))
     .pipe(browserSync.stream());
 }
+
 function pugFunc() {
   return src(path.src.pug)
     .pipe(
@@ -148,15 +153,18 @@ function pugFunc() {
     .pipe(dest(path.build.html))
     .pipe(browserSync.stream());
 }
+
 function html() {
   return src(path.src.html)
     .pipe(fileInclude())
     .pipe(dest(path.build.html))
     .pipe(browserSync.stream());
 }
+
 function cleanimg() {
   return del("app/img/dest/**/*", { force: true });
 }
+
 function fonts() {
   return src(path.src.fonts)
     .pipe(ttf2woff())

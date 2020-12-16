@@ -1,7 +1,7 @@
-#popup__form.popup.animate__animated
-  .popup-bg
+.popup__form.popup.animate__animated
+  .popup__overlay.overlay.overlay-popup__overlay
   form.send__form.form__popup.animate__animated(action="")
-    .form__popup-close.close__form
+    .close.close__form
       span
     input(type="hidden", name="project_name",value="Site Name")
     input(type="hidden", name="admin_email",value="admin@mail.com")
@@ -29,4 +29,4 @@
       rows="10",
       placeholder="Введите текст")
     input#popup__form-submit(type="submit")
-    label.form__popup-btn.btn(for="popup__form-submit") Отправить
+    label.btn-popup__btn.btn(for="popup__form-submit") Отправить

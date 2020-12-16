@@ -98,14 +98,15 @@
 }
 
 .title__gardient {
-  font-weight: bold;
-  text-transform: uppercase;
-
   background: linear-gradient(to top, #fc8fa3 35%, #d3ddf5 30%, #9f96f3 5%, #fff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: .01px;
   -webkit-text-stroke-color: #e9968e;
+}
+
+.text__animated {
+  animation: rgbText 1s steps(9) 0s infinite alternate;
 }
 
 .menu {
@@ -116,7 +117,7 @@
 
 .menu__link {
   will-change: text-shadow;
-  animation: rgbText 1s steps(9) 0s infinite alternate;
+  @extend .text__animated;
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
@@ -134,8 +135,8 @@
   }
 }
 
-.header__link {
-  animation: rgbText 1s steps(9) 0s infinite alternate;
+.contacts__link {
+  @extend .text__animated;
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
@@ -168,46 +169,61 @@ $btnBgHover: #9267D2;
   position: relative;
   @include _transition(all, .5s);
 
-  // background: $btnBg;
-  // color: #fff;
+  &-project__btn {
+    max-width: 250px;
+  }
+
+  &-rec__btn {
+    &:before {
+
+      animation: rec__blink infinite alternate;
+      animation-duration: 1s;
+      animation-delay: 5s;
+      position: absolute;
+      content: '';
+      right: 15px;
+      top: 10px;
+      width: 12px;
+      height: 12px;
+      background: #646464;
+      background-image: radial-gradient(top, #616161 0%, #616161 20%, #535353 60%);
+      border-radius: 50%;
+      box-shadow: 0 0 4px #1C1C17;
+      transition: all .3s ease;
+
+    }
+
+    &:hover {
+      &:before {
+        animation-play-state: paused;
+        background: #FF4F4F;
+        box-shadow: 0 0 4px #1C1C17,
+          0 0 5px #FF4242;
+      }
+    }
+
+    &:active {
+      &:before {
+        box-shadow: 0 0 4px #1C1C17,
+          inset 0 2px 2px 0px #CC0000;
+      }
+    }
+  }
 
   &:hover {
     color: #9E9E9E;
-
-    &:before {
-      background: #FF4F4F;
-      box-shadow: 0 0 4px #1C1C17,
-        0 0 5px #FF4242;
-    }
   }
 
   &:active {
     box-shadow: 0 0 1px 1px rgb(10, 10, 10),
       inset 0 2px 2px 0px black;
 
-    &:before {
-      box-shadow: 0 0 4px #1C1C17,
-        inset 0 2px 2px 0px #CC0000;
-    }
+
   }
 
-  &:before {
-    position: absolute;
-    content: '';
-    right: 15px;
-    top: 10px;
 
-    width: 12px;
-    height: 12px;
-    background: #646464;
-    background-image: radial-gradient(top, #616161 0%, #616161 20%, #535353 60%);
-    border-radius: 50%;
-    box-shadow: 0 0 4px #1C1C17;
-    transition: all .3s ease;
-  }
-
-  &-header__btn {
-    max-width: 175px;
+  &-popup__btn {
+    max-width: 100%;
   }
 
   &-download__btn {
@@ -230,17 +246,28 @@ $btnBgHover: #9267D2;
   justify-content: center;
   z-index: 100500;
   display: none;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  // backdrop-filter: blur(10px);
 
-  &-bg {
-    backdrop-filter: blur(10px);
+}
+
+.overlay {
+  background: rgba(rgba(41, 41, 41, .45), 0.4);
+  z-index: 1;
+
+  &-popup__overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.4);
     cursor: pointer;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
   }
 }
-
 
 
 input,
@@ -280,48 +307,48 @@ textarea {
   &-textarea {
     margin-bottom: 15px;
   }
+}
 
-  &-close {
-    cursor: pointer;
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+
+  @include _transition(transform, .3s);
+
+  span {
+    @include _borderRadius(5%);
     position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 25px;
-    height: 25px;
-    display: flex;
+    // top: 0%;
+    right: 0%;
+    transform: rotate(45deg);
+    display: block;
+    background: $textcolor;
+    width: 100%;
+    height: 3px;
+    bottom: 10px;
 
-    @include _transition(transform, .3s);
-
-    span {
-      @include _borderRadius(5%);
-      position: absolute;
-      // top: 0%;
+    &::before {
+      @include _borderRadius(5%); // top: 0%;
       right: 0%;
-      transform: rotate(45deg);
+      bottom: 10px;
+      content: '';
+      position: absolute;
+      top: 0;
+      transform: rotate(-90deg);
       display: block;
       background: $textcolor;
       width: 100%;
       height: 3px;
-      bottom: 10px;
-
-      &::before {
-        @include _borderRadius(5%); // top: 0%;
-        right: 0%;
-        bottom: 10px;
-        content: '';
-        position: absolute;
-        top: 0;
-        transform: rotate(-90deg);
-        display: block;
-        background: $textcolor;
-        width: 100%;
-        height: 3px;
-      }
     }
+  }
 
-    &:hover {
-      transform: scale(1.1);
-    }
+  &:hover {
+    transform: scale(1.1);
   }
 }
 
@@ -414,7 +441,6 @@ textarea {
   flex-direction: column;
   background: rgba(162, 162, 162, 0.316);
   box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.316);
-  // backdrop-filter: blur(10px);
 
 }
 
@@ -422,7 +448,9 @@ textarea {
 .screen__title {
   display: inline-flex;
   flex-direction: column;
-  @extend .title__gardient;
+  margin-bottom: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .screen__body {
@@ -432,6 +460,7 @@ textarea {
   top: 0;
   overflow: hidden;
   position: absolute;
+
 }
 
 .screen__bg {
@@ -441,7 +470,6 @@ textarea {
   top: 0;
   overflow: hidden;
   position: absolute;
-
 
 
   img,
@@ -457,19 +485,79 @@ textarea {
 
 }
 
-.overlay {
-  position: absolute;
+.screen__wrapp {
+  display: flex;
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  backdrop-filter: blur(10px);
-  z-index: 1;
+  justify-content: space-between;
+  padding: 0 2%;
+}
+
+.contact__wrapp {
+  color: #fff;
+}
+
+.project__text {
+  width: 45%;
+}
+
+.projects__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  width: 45%;
+  max-width: 600px;
+
+  align-self: center;
+  // height: 300px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  // overflow: hidden;
+  justify-items: center;
+}
+
+.project,
+.project__vertical {
+  // &-container {
+  height: 150px;
+  width: 100%;
+  max-width: 150px;
+  overflow: hidden;
+  margin-left: 0;
+  margin-right: 0;
+  // }
+  @include _transition(all, .5s);
+
+  &:hover {
+    transform: scale(1.1);
+    z-index: 2;
+  }
+
+  &-wrapper,
+  &-slide {
+    background: $accentSecond;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+
+    }
+  }
+
 }
 
 .screen__text {
   &-white {
     color: #fff;
+  }
+
+  &-top__section {
+    max-width: 800px;
   }
 
   p {
@@ -481,17 +569,28 @@ textarea {
   }
 }
 
+.screen__col {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, .3);
+  backdrop-filter: blur(10px);
+
+}
+
 .link__wrap {
   display: flex;
   justify-content: space-between;
   width: auto;
-  max-width: 300px;
+  max-width: 350px;
   position: fixed;
   bottom: 0px;
   right: 0%;
   left: 0%;
   margin: 0 auto;
   padding: 0 40px 5px;
+  z-index: 5;
 
   &:before,
   &::after {
@@ -523,8 +622,6 @@ textarea {
 
 
 .contact__icon {
-
-
   @include _transition(all, .3s);
   position: relative;
   font-size: 25px;
@@ -556,4 +653,22 @@ textarea {
     color: $textAltColor;
     transform: scale(1.5)translate(0, -20%);
   }
+}
+
+.project__preview {
+  -webkit-animation-duration: .7s;
+  animation-duration: .7s;
+  max-width: 70vw;
+  max-height: 70vh;
+  overflow: auto;
+  position: relative;
+  display: flex;
+  z-index: 2;
+}
+
+.project__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
