@@ -1,9 +1,10 @@
 // USER VARIABLES SECTION
 
 $accent: rgb(191, 126, 157); // Accent Color
-$accentSecond: rgb(28, 37, 62); // Accent Color
+$accentSecond: rgb(28, 37, 62); // Accent second Color
+$accentSecondOpacity: rgba(28, 37, 62, 0.5); // Accent second Color
 $accentOpacity:rgba(191, 126, 157, 0.5); // Accent Color Opacity 0.5
-$mainColor:rgb(242, 188, 168); // Body Background Color
+$mainColor:#f2bca8; // Body Background Color
 $mainColorOpacity:rgba(242, 188, 168, .5); // Body Background Color Opacity 0.5
 $fontsize: 10px; // Body Font Size
 $textcolor: rgb(28, 37, 62); // Text Color
@@ -19,7 +20,7 @@ $maxWidth: 1920;
 $maxWidthContainer:1170;
 //MIXINS
 
-@mixin _transition($element, $time) {
+@mixin _transition($element:all, $time:.5s) {
 	transition: $element ease-in-out $time;
 	-webkit-transition: $element ease-in-out $time;
 	-moz-transition: $element ease-in-out $time;
@@ -480,7 +481,7 @@ h,
 		}
 	}
 
-	@media only screen and (max-width : 533px) {
+	@media only screen and (max-width : 600px) {
 		&1 {
 			font-size: 2.4rem;
 		}
@@ -508,14 +509,14 @@ a,
 li,
 .p,
 label {
-	font-size: 1.6rem;
+	font-size: 1.2rem;
 
-	@media only screen and (max-width : 768px) {
-		font-size: 1.4rem;
+	// @media only screen and (max-width : 768px) {
+	// 	font-size: 1.2em;
 
-	}
+	// }
 
-	@media only screen and (max-width : 533px) {
+	@media only screen and (max-width : 600px) {
 		font-size: 1.2rem;
 
 	}

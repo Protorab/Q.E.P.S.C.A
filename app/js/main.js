@@ -156,7 +156,20 @@ document.addEventListener("DOMContentLoaded", () => {
       popupHide();
     }
   });
-
+  let touchMove;
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    // true for mobile device
+    console.log("mobile device");
+    touchMove = true;
+  } else {
+    // false for not mobile device
+    console.log("not mobile device");
+    touchMove = false;
+  }
   const wrapper = document.querySelector(".wrapper");
   const pageSlider = new Swiper(".page", {
     // переопределить классы
@@ -178,6 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
       sensitivity: 1,
       releaseOnEdges: false,
     },
+    allowTouchMove: touchMove,
     watchOverflow: true,
     speed: 800,
     observer: true,
@@ -236,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function setScrollType() {
     if (wrapper.classList.contains("__free")) {
       wrapper.classList.remove("__free");
-      pageSlide.params.freMode = false;
+      pageSlider.params.freMode = false;
     }
     for (let i = 0; i < pageSlider.slides.length; i++) {
       const pageSlide = pageSlider.slides[i];
@@ -245,14 +259,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const pageSlideContentHeight = pageSlideContent.offsetHeight;
         if (pageSlideContentHeight > window.innerHeight) {
           wrapper.classList.add("__free");
-          pageSlide.params.freMode = true;
+          pageSlider.params.freMode = true;
           break;
         }
       }
     }
   }
   pageSlider.init();
-  new Swiper(".project", {
+  const projectHorisontal = new Swiper(".project", {
     effect: "cube",
     rtl: true,
     cubeEffect: {
@@ -270,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
       disableOnInteraction: false,
     },
   });
-  new Swiper(".project__vertical", {
+  const projectVertical = new Swiper(".project__vertical", {
     effect: "cube",
 
     cubeEffect: {
@@ -288,4 +302,10 @@ document.addEventListener("DOMContentLoaded", () => {
       disableOnInteraction: false,
     },
   });
+  // projectHorisontal.addEventListener("mouseenter", (e) => {
+  //   projectHorisontal.autoplay.stop();
+  // });
+  // projectHorisontal.addEventListener("mouseleave", (e) => {
+  //   projectHorisontal.autoplay.start();
+  // });
 });

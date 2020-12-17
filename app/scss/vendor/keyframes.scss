@@ -142,3 +142,40 @@
       0 0 5px #FF4242;
   }
 }
+
+@keyframes border__animation {
+
+  0% {
+    border-left-color: $accentSecond;
+  }
+
+  25% {
+    border-top-color: $accentSecond;
+    border-left-color: $accentSecond;
+
+
+  }
+
+  50% {
+    border-top-color: $accentSecond;
+    border-left-color: $accentSecond;
+    border-right-color: $accentSecond;
+
+  }
+
+  75% {
+    border-bottom-color: $accentSecond;
+    border-top-color: $accentSecond;
+    border-left-color: $accentSecond;
+    border-right-color: $accentSecond;
+
+  }
+
+  100% {
+    border-color: transparent;
+    // border-left-color: $accentSecond;
+    // border-left: dashed 2px $accentSecond;
+    // border-top: dashed 2px $accentSecond;
+    // border-right: dashed 2px $accentSecond;
+  }
+}

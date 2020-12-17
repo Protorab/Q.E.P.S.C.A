@@ -1,0 +1,11 @@
+<svg width="12.7" height="12.7" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path clip-rule="nonzero" fill="#1c253e" fill-rule="evenodd" stroke-width="1.411111" stroke-miterlimit="4" stroke-dashoffset="0" id="path4483" d="m9.525,3.174972l-3.88056,3.88056l-2.46944,-2.46944l-1.05833,1.05835l3.52916,3.52776l4.9375,-4.93888l-1.05833,-1.05835z"/>
+ </g>
+</svg>
