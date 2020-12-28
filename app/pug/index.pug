@@ -1,1132 +1,1242 @@
+<!DOCTYPE html>
+html(lang="ru")
 
-include includes/head.pug
-body
-  .wrapper
+  include includes/head.pug
 
-    include includes/header.pug
-    
-    main.page(role='main')
-      .page__wrapper
-        
-        .page__screen.screen
-          .lines
-          .noise
-          .screen__content.screen__content-bg
-            h1.t1.screen__title.title__gradient(
-            data-swiper-parallax="50%",
-            data-swiper-parallax-opacity="0"
-            ) Q.E.P.S.C.A
-            .screen__text.screen__text-white.screen__text-top__section(
-            data-swiper-parallax-x="-45%",
-            data-swiper-parallax-opacity="0",
-            data-swiper-parallax-duration="900"
-            )
-              p Наша компания насчитывает тысячелетний опыт разработки в сфере веб технологий, термоядерного синтеза, межгалактических перелётов, разрешения квантовой запутанности и мука производстве
-          .screen__body
-            .screen__bg
-              video(
-                playsinline,
-                autoplay,
-                muted,
-                loop,
-                data-swiper-parallax-scale="1.8",
-                data-swiper-parallax="50%"
-              )
-                source(
-                  src="assets/video/top__bg.mp4",
-                  type="video/mp4",
-                  alt="Видео",
-                  
-                  )
-        
-        .page__screen.screen
+  body
+    .wrapper
+
+      include includes/header.pug
+      
+      main.page(role='main')
+      
+        .page__wrapper
           
-          .screen__content
-            h1.screen__title.text__animated(
-            data-swiper-parallax-x="70%",
-            data-swiper-parallax-opacity="0",
-            data-swiper-parallax-duration="700"
-            ) Проекты 
-            .screen__wrapp.screen__text
-              .screen__col.projects__text(
+          #top__screen.page__screen.screen
+            .lines
+            .noise
+            .screen__content.screen__content-bg
+              h1.screen__title.title__gradient(
+              data-swiper-parallax="50%",
+              data-swiper-parallax-opacity="0"
+              ) Q.E.P.S.C.A
+              .screen__text.screen__text-white.screen__text-top__section(
               data-swiper-parallax-x="-45%",
               data-swiper-parallax-opacity="0",
-              data-swiper-parallax-duration="1200"
-              ) 
-                p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, corrupti eum! Culpa, in libero? Ut corrupti quo vitae, assumenda provident deserunt eligendi debitis dolorem earum iusto quaerat qui animi modi?
-                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam suscipit, quisquam aspernatur rerum commodi asperiores beatae minus perferendis maiores repellat dolorem, aliquid eius debitis quo eligendi totam officia! A, pariatur?
-                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt officiis aut praesentium nulla eligendi corrupti quas consectetur qui doloribus commodi.
-                a.btn.btn-project__btn.show__form(href="$") Заказать проект
-              .projects__wrapper(
-              data-swiper-parallax-y="-45%",
-              data-swiper-parallax-opacity="0",
-              data-swiper-parallax-duration="1200"
+              data-swiper-parallax-duration="900"
               )
-                .project__vertical.swiper-container(
-                  )
-                  .swiper-wrapper.project-wrapper
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__2/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__2/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__8/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__8/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__9/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__9/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__12/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__12/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__12/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__12/logo.png", 
-                        alt=""
-                        )
-                .project.swiper-container(
-                  )
-                  .swiper-wrapper.project-wrapper
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__12/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__12/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__11/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__11/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__1/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__1/logo.png", 
-                        alt=""
-                        )
-                .project__vertical.swiper-container(
-                  )
-                  .swiper-wrapper.project-wrapper
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__9/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__9/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__4/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__4/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__2/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__2/logo.png", 
-                        alt=""
-                        )
-                .project.swiper-container(
-                  )
-                  .swiper-wrapper.project-wrapper
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__12/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__12/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__4/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__4/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__2/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__2/logo.png", 
-                        alt=""
-                        )
-                .project.swiper-container(
-                  data-direction="vertical"
-                  data-autoplay-delay="3500",
-                  )
-                  .swiper-wrapper.project-wrapper
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__9/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__9/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__5/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__5/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__9/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__9/logo.png", 
-                        alt=""
-                        )
-                .project__vertical.swiper-container(
-                  data-direction="vertical"
-                  data-autoplay-delay="3500",
-                  )
-                  .swiper-wrapper.project-wrapper
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__9/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__9/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__5/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__5/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__14/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__14/logo.png", 
-                        alt=""
-                        )
-                .project__vertical.swiper-container(
-                  data-direction="vertical"
-                  data-autoplay-delay="3500",
-                  )
-                  .swiper-wrapper.project-wrapper
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__6/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__6/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__5/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__5/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__6/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__6/logo.png", 
-                        alt=""
-                        )
-                .project.swiper-container(
-                  data-direction="vertical"
-                  data-autoplay-delay="3500",
-                  )
-                  .swiper-wrapper.project-wrapper
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__13/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__13/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__6/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__6/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__13/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__13/logo.png", 
-                        alt=""
-                        )
-                .project.swiper-container(
-                  data-direction="vertical"
-                  data-autoplay-delay="3500",
-                  )
-                  .swiper-wrapper.project-wrapper
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__13/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__13/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__6/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__6/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__12/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__12/logo.png", 
-                        alt=""
-                        )
-                .project__vertical.swiper-container(
-                  data-direction="vertical"
-                  data-autoplay-delay="3500",
-                  )
-                  .swiper-wrapper.project-wrapper
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__14/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__14/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__6/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__6/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__1/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__1/logo.png", 
-                        alt=""
-                        )
-                .project.swiper-container(
-                  data-direction="vertical"
-                  data-autoplay-delay="3500",
-                  )
-                  .swiper-wrapper.project-wrapper
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__1/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__1/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__6/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__6/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__1/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__1/logo.png", 
-                        alt=""
-                        )
-                .project.swiper-container(
-                  data-direction="vertical"
-                  data-autoplay-delay="3500",
-                  )
-                  .swiper-wrapper.project-wrapper
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__10/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__10/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__6/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__6/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__1/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__1/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__14/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__14/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__12/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__12/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__7/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__7/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__7/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__7/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__8/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__8/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__4/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__4/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__10/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__10/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__2/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__2/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__12/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__12/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__4/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__4/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__10/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__10/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__8/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__8/logo.png", 
-                        alt=""
-                        )                       
-                .project__vertical.swiper-container(
-                  data-direction="vertical"
-                  data-autoplay-delay="3500",
-                  )
-                  .swiper-wrapper.project-wrapper
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__10/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__10/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__10/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__10/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__10/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__10/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__12/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__12/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__10/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__10/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__4/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__4/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__9/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__9/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__10/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__10/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__2/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__2/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__7/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__7/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__7/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__7/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__12/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__12/logo.png", 
-                        alt=""
-                        )
-                .project.swiper-container(
-                  data-direction="vertical"
-                  data-autoplay-delay="3500",
-                  )
-                  .swiper-wrapper.project-wrapper
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__7/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__7/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__7/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__7/logo.png",
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__7/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__7/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__3/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__3/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__3/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__3/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__7/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__7/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__2/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__2/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__4/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__4/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__11/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__11/logo.png", 
-                        alt=""
-                        )
-                    a(
-                      href="#",
-                      data-preview="img/projects/project__9/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                      img(
-                        src="img/projects/project__9/logo.png", 
-                        alt=""
-                        )                     
-                .project__vertical.swiper-container(
-                    data-direction="vertical"
-                    data-autoplay-delay="3500",
+                p Наша компания насчитывает тысячелетний опыт разработки в сфере веб технологий, термоядерного синтеза, межгалактических перелётов, разрешения квантовой запутанности и мука производстве
+            .screen__body
+              .screen__bg
+                video(
+                  playsinline,
+                  autoplay,
+                  muted,
+                  loop,
+                  data-swiper-parallax-scale="1.8",
+                  data-swiper-parallax="50%"
+                )
+                  source(
+                    src="assets/video/top__bg.mp4",
+                    type="video/mp4",
+                    alt="Видео",
+                    
+                    )
+          
+          #project__screen.page__screen.screen
+            .lines
+            .noise
+            .screen__content
+              h2.screen__title(
+              data-swiper-parallax-x="70%",
+              data-swiper-parallax-opacity="0",
+              data-swiper-parallax-duration="700"
+              ) Проекты 
+              .screen__wrapp.screen__text
+                .screen__col.projects__text(
+                data-swiper-parallax-x="-45%",
+                data-swiper-parallax-opacity="0",
+                data-swiper-parallax-duration="1200"
+                ) 
+                  p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, corrupti eum! Culpa, in libero? Ut corrupti quo vitae, assumenda provident deserunt eligendi debitis dolorem earum iusto quaerat qui animi modi?
+                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam suscipit, quisquam aspernatur rerum commodi asperiores beatae minus perferendis maiores repellat dolorem, aliquid eius debitis quo eligendi totam officia! A, pariatur?
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt officiis aut praesentium nulla eligendi corrupti quas consectetur qui doloribus commodi.
+                  a.btn.btn-project__btn.show__form(href="$") Заказать проект
+                .projects__wrapper(
+                data-swiper-parallax-y="-45%",
+                data-swiper-parallax-opacity="0",
+                data-swiper-parallax-duration="1200"
+                )
+                  .project__vertical.swiper-container(
                     )
                     .swiper-wrapper.project-wrapper
                       a(
-                      href="#",
-                      data-preview="img/projects/project__1/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
+                        href="#",
+                        data-preview="img/projects/project__2/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
                         img(
-                          src="img/projects/project__1/logo.png",
+                          src="img/projects/project__2/logo.png",
                           alt=""
                           )
                       a(
-                      href="#",
-                      data-preview="img/projects/project__11/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
+                        href="#",
+                        data-preview="img/projects/project__8/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__8/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__9/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__9/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__12/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__12/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__12/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__12/logo.png", 
+                          alt=""
+                          )
+                  .project.swiper-container(
+                    )
+                    .swiper-wrapper.project-wrapper
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__12/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__12/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__11/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
                         img(
                           src="img/projects/project__11/logo.png",
                           alt=""
                           )
                       a(
-                      href="#",
-                      data-preview="img/projects/project__3/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                        img(
-                          src="img/projects/project__3/logo.png", 
-                          alt=""
-                          )
-                      a(
-                      href="#",
-                      data-preview="img/projects/project__3/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                        img(
-                          src="img/projects/project__3/logo.png", 
-                          alt=""
-                          )
-                      a(
-                      href="#",
-                      data-preview="img/projects/project__14/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                        img(
-                          src="img/projects/project__14/logo.png", 
-                          alt=""
-                          )
-                      a(
-                      href="#",
-                      data-preview="img/projects/project__11/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                        img(
-                          src="img/projects/project__11/logo.png", 
-                          alt=""
-                          )
-                      a(
-                      href="#",
-                      data-preview="img/projects/project__5/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                        img(
-                          src="img/projects/project__5/logo.png", 
-                          alt=""
-                          )
-                      a(
-                      href="#",
-                      data-preview="img/projects/project__2/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
-                        img(
-                          src="img/projects/project__2/logo.png", 
-                          alt=""
-                          )
-                      a(
-                      href="#",
-                      data-preview="img/projects/project__1/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
+                        href="#",
+                        data-preview="img/projects/project__1/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
                         img(
                           src="img/projects/project__1/logo.png", 
                           alt=""
                           )
+                  .project__vertical.swiper-container(
+                    )
+                    .swiper-wrapper.project-wrapper
                       a(
-                      href="#",
-                      data-preview="img/projects/project__11/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
+                        href="#",
+                        data-preview="img/projects/project__9/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
                         img(
-                          src="img/projects/project__11/logo.png", 
+                          src="img/projects/project__9/logo.png",
                           alt=""
-                          )                          
-                .project__vertical.swiper-container(
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__4/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__4/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__2/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__2/logo.png", 
+                          alt=""
+                          )
+                  .project.swiper-container(
+                    )
+                    .swiper-wrapper.project-wrapper
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__12/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__12/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__4/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__4/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__2/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__2/logo.png", 
+                          alt=""
+                          )
+                  .project.swiper-container(
                     data-direction="vertical"
                     data-autoplay-delay="3500",
                     )
                     .swiper-wrapper.project-wrapper
                       a(
-                      href="#",
-                      data-preview="img/projects/project__3/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
+                        href="#",
+                        data-preview="img/projects/project__9/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
                         img(
-                          src="img/projects/project__3/logo.png",
+                          src="img/projects/project__9/logo.png",
                           alt=""
                           )
                       a(
-                      href="#",
-                      data-preview="img/projects/project__5/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
+                        href="#",
+                        data-preview="img/projects/project__5/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
                         img(
                           src="img/projects/project__5/logo.png",
                           alt=""
                           )
                       a(
-                      href="#",
-                      data-preview="img/projects/project__13/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
+                        href="#",
+                        data-preview="img/projects/project__9/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__9/logo.png", 
+                          alt=""
+                          )
+                  .project__vertical.swiper-container(
+                    data-direction="vertical"
+                    data-autoplay-delay="3500",
+                    )
+                    .swiper-wrapper.project-wrapper
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__9/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__9/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__5/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__5/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__14/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__14/logo.png", 
+                          alt=""
+                          )
+                  .project__vertical.swiper-container(
+                    data-direction="vertical"
+                    data-autoplay-delay="3500",
+                    )
+                    .swiper-wrapper.project-wrapper
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__6/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__6/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__5/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__5/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__6/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__6/logo.png", 
+                          alt=""
+                          )
+                  .project.swiper-container(
+                    data-direction="vertical"
+                    data-autoplay-delay="3500",
+                    )
+                    .swiper-wrapper.project-wrapper
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__13/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__13/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__6/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__6/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__13/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
                         img(
                           src="img/projects/project__13/logo.png", 
                           alt=""
                           )
+                  .project.swiper-container(
+                    data-direction="vertical"
+                    data-autoplay-delay="3500",
+                    )
+                    .swiper-wrapper.project-wrapper
                       a(
-                      href="#",
-                      data-preview="img/projects/project__8/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
+                        href="#",
+                        data-preview="img/projects/project__13/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__13/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__6/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__6/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__12/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__12/logo.png", 
+                          alt=""
+                          )
+                  .project__vertical.swiper-container(
+                    data-direction="vertical"
+                    data-autoplay-delay="3500",
+                    )
+                    .swiper-wrapper.project-wrapper
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__14/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__14/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__6/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__6/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__1/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__1/logo.png", 
+                          alt=""
+                          )
+                  .project.swiper-container(
+                    data-direction="vertical"
+                    data-autoplay-delay="3500",
+                    )
+                    .swiper-wrapper.project-wrapper
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__1/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__1/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__6/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__6/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__1/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__1/logo.png", 
+                          alt=""
+                          )
+                  .project.swiper-container(
+                    data-direction="vertical"
+                    data-autoplay-delay="3500",
+                    )
+                    .swiper-wrapper.project-wrapper
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__10/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__10/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__6/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__6/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__1/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__1/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__14/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__14/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__12/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__12/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__7/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__7/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__7/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__7/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__8/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
                         img(
                           src="img/projects/project__8/logo.png", 
                           alt=""
                           )
                       a(
-                      href="#",
-                      data-preview="img/projects/project__8/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
+                        href="#",
+                        data-preview="img/projects/project__4/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
                         img(
-                          src="img/projects/project__8/logo.png", 
+                          src="img/projects/project__4/logo.png", 
                           alt=""
                           )
                       a(
-                      href="#",
-                      data-preview="img/projects/project__13/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
+                        href="#",
+                        data-preview="img/projects/project__10/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
                         img(
-                          src="img/projects/project__13/logo.png", 
+                          src="img/projects/project__10/logo.png", 
                           alt=""
                           )
                       a(
-                      href="#",
-                      data-preview="img/projects/project__8/preview.jpg",
-                      data-name="",
-                      ).swiper-slide.project-slide.show__project
+                        href="#",
+                        data-preview="img/projects/project__2/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__2/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__12/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__12/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__4/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__4/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__10/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__10/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__8/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
                         img(
                           src="img/projects/project__8/logo.png", 
                           alt=""
-                          )              
-        .page__screen.screen
-          .lines
-          .noise
-          .screen__content
-            h1.screen__title.title__gradient(
-            data-swiper-parallax-x="70%",
-            data-swiper-parallax-opacity="0",
-            data-swiper-parallax-duration="700"
-            ) Услуги
-            .rates
-              .rates__item
-                .rates__item-preview
-                  .rates__item-img
-                    img(
-                      src="img/svg/rates/icon__1_white.svg",
-                      alt="")
-                  .rates__item-title 
-                    h4 Одностраничный сайт <br> (Landing Page)
-                  .rates__item-price
-                    h4 от 299$
-                .rates__item-description
-                  p 
-                    strong Кому подходит:
-                    ul
-                      li Бизнесам, которые продают один товар/услугу.
-                      li Бизнесам, клиенты которых склонны к импульсным покупкам. 
-                      li Тем, кому надо разработать сайт быстро и с минимальным участием в процессе 
-                      li Тем, кто хочет протестировать нишу/спрос
-                  .rates__item-btns  
-                    a(
-                      href="#",
-                      data-subject="Хочу заказать - Landing Page"
-                      ).btn.btn-rates__btn.show__form Заказать
-                    a(
-                      href="#",
-                      data-more__info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe veritatis minima asperiores sed accusamus blanditiis doloribus fugit, molestias dolores iusto non molestiae, tempora a expedita eveniet placeat excepturi. Nam, minima?"
-                      ).rates__item-more__btn Подробнее
-
-              .rates__item
-                .rates__item-preview
-                  .rates__item-img
-                    img(
-                      src="img/svg/rates/icon__2_white.svg",
-                      alt="")
-                  .rates__item-title 
-                    h4 Сайт-визитка/<br>Корпоративный сайт
-                  .rates__item-price
-                    h4 от 299$
-                .rates__item-description
-                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, voluptatem? Animi quo cum nostrum?  
-                  .rates__item-btns  
-                    a(
-                      href="#",
-                      data-subject="Хочу заказать - Корпоративный сайт"
-                      ).btn.btn-rates__btn.show__form Заказать
-                    a(
-                      href="#",
-                      data-more__info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe veritatis minima asperiores sed accusamus blanditiis doloribus fugit, molestias dolores iusto non molestiae, tempora a expedita eveniet placeat excepturi. Nam, minima?"
-                      ).rates__item-more__btn Подробнее
-
-              .rates__item
-                .rates__item-preview
-                  .rates__item-img
-                    img(
-                      src="img/svg/rates/icon__3_white.svg",
-                      alt="")
-                  .rates__item-title 
-                    h4 Сайт-каталог<br>(Витрина)
-                  .rates__item-price
-                    h4 от 299$                    
-                .rates__item-description
-                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, voluptatem? Animi quo cum nostrum?
-                  .rates__item-btns  
-                    a(
-                      href="#",
-                      data-subject="Хочу заказать - Сайт-каталог"
-                      ).btn.btn-rates__btn.show__form Заказать
-                    a(
-                      href="#",
-                      data-more__info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe veritatis minima asperiores sed accusamus blanditiis doloribus fugit, molestias dolores iusto non molestiae, tempora a expedita eveniet placeat excepturi. Nam, minima?"
-                      ).rates__item-more__btn Подробнее
-
-              .rates__item
-                .rates__item-preview
-                  .rates__item-img
-                    img(
-                      src="img/svg/rates/icon__4_white.svg",
-                      alt="")
-                  .rates__item-title 
-                    h4 Интернет-магазин
-                  .rates__item-price
-                    h4 от 299$                    
-                .rates__item-description
-                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, voluptatem? Animi quo cum nostrum?  
-                  .rates__item-btns  
-                    a(
-                      href="#",
-                      data-subject="Хочу заказать - "
-                      ).btn.btn-rates__btn.show__form Заказать
-                    a(
-                      href="#",
-                      data-more__info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe veritatis minima asperiores sed accusamus blanditiis doloribus fugit, molestias dolores iusto non molestiae, tempora a expedita eveniet placeat excepturi. Nam, minima?"
-                      ).rates__item-more__btn Подробнее
-
-          .screen__body
-            .screen__bg
-              .overlay
-              noscript.loading-lazy
-                img(
-                  loading="lazy"
-                  src="img/img_2.jpg",
-                  alt="Картинка", 
-                  data-swiper-parallax-scale="1.5",
-                  data-swiper-parallax="50%"
-                  )
-        
-        .page__screen.screen
-          .screen__content
-            h1.screen__title.text__animated(
-            data-swiper-parallax-x="70%",
-            data-swiper-parallax-opacity="0",
-            data-swiper-parallax-duration="700"
-            ) Этапы
-            .screen__text(
-            data-swiper-parallax-x="-45%",
-            data-swiper-parallax-opacity="0",
-            data-swiper-parallax-duration="1200"
-            )
-              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora repudiandae dolorem praesentium, numquam distinctio id tenetur accusamus eaque nobis mollitia explicabo repellendus corporis omnis voluptatum asperiores nesciunt molestias iure quisquam?
-        
-        .page__screen.screen
-          .screen__content.screen__content-bg
-            h1.screen__title.title__gradient(
-            data-swiper-parallax-x="70%",
-            data-swiper-parallax-opacity="0",
-            data-swiper-parallax-duration="700"
-            ) Контакты
-            .screen__wrapp(
-            data-swiper-parallax-y="-45%",
-            data-swiper-parallax-opacity="0",
-            data-swiper-parallax-duration="1000"
-            )
-              .screen__col(
-            )
-                p Phones:
-                  .contacts__link
-                    a(href="tel:+375123456789") +375123456789
-                    a(href="tel:+375123456789") +375123456789
-                p Email:
-                  .contacts__link
-                    a(href="mailto:email@gmail.com") email@gmail.com
-              form(action="").screen__col.contact__form
-                label.contact__label(for="contact__Name") Ваше имя
-                input#contact__Name.contact__input(type="text", name="Имя")
-                label.contact__label(for="contact__phone") Ваш телефон
-                input#contact__phone.contact__input.telephone(type="tel", name="Телефон")
-                label.contact__label(for="contact__email") Ваш email
-                input#contact__email.contact__input(type="email", name="Телефон")
-                label.btn(for="contact__submit") Отправить
-                input#contact__submit(type="submit", value="")
-          .screen__body
+                          )                       
+                  .project__vertical.swiper-container(
+                    data-direction="vertical"
+                    data-autoplay-delay="3500",
+                    )
+                    .swiper-wrapper.project-wrapper
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__10/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__10/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__10/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__10/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__10/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__10/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__12/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__12/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__10/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__10/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__4/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__4/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__9/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__9/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__10/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__10/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__2/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__2/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__7/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__7/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__7/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__7/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__12/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__12/logo.png", 
+                          alt=""
+                          )
+                  .project.swiper-container(
+                    data-direction="vertical"
+                    data-autoplay-delay="3500",
+                    )
+                    .swiper-wrapper.project-wrapper
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__7/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__7/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__7/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__7/logo.png",
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__7/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__7/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__3/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__3/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__3/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__3/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__7/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__7/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__2/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__2/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__4/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__4/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__11/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__11/logo.png", 
+                          alt=""
+                          )
+                      a(
+                        href="#",
+                        data-preview="img/projects/project__9/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                        img(
+                          src="img/projects/project__9/logo.png", 
+                          alt=""
+                          )                     
+                  .project__vertical.swiper-container(
+                      data-direction="vertical"
+                      data-autoplay-delay="3500",
+                      )
+                      .swiper-wrapper.project-wrapper
+                        a(
+                        href="#",
+                        data-preview="img/projects/project__1/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                          img(
+                            src="img/projects/project__1/logo.png",
+                            alt=""
+                            )
+                        a(
+                        href="#",
+                        data-preview="img/projects/project__11/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                          img(
+                            src="img/projects/project__11/logo.png",
+                            alt=""
+                            )
+                        a(
+                        href="#",
+                        data-preview="img/projects/project__3/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                          img(
+                            src="img/projects/project__3/logo.png", 
+                            alt=""
+                            )
+                        a(
+                        href="#",
+                        data-preview="img/projects/project__3/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                          img(
+                            src="img/projects/project__3/logo.png", 
+                            alt=""
+                            )
+                        a(
+                        href="#",
+                        data-preview="img/projects/project__14/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                          img(
+                            src="img/projects/project__14/logo.png", 
+                            alt=""
+                            )
+                        a(
+                        href="#",
+                        data-preview="img/projects/project__11/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                          img(
+                            src="img/projects/project__11/logo.png", 
+                            alt=""
+                            )
+                        a(
+                        href="#",
+                        data-preview="img/projects/project__5/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                          img(
+                            src="img/projects/project__5/logo.png", 
+                            alt=""
+                            )
+                        a(
+                        href="#",
+                        data-preview="img/projects/project__2/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                          img(
+                            src="img/projects/project__2/logo.png", 
+                            alt=""
+                            )
+                        a(
+                        href="#",
+                        data-preview="img/projects/project__1/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                          img(
+                            src="img/projects/project__1/logo.png", 
+                            alt=""
+                            )
+                        a(
+                        href="#",
+                        data-preview="img/projects/project__11/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                          img(
+                            src="img/projects/project__11/logo.png", 
+                            alt=""
+                            )                          
+                  .project__vertical.swiper-container(
+                      data-direction="vertical"
+                      data-autoplay-delay="3500",
+                      )
+                      .swiper-wrapper.project-wrapper
+                        a(
+                        href="#",
+                        data-preview="img/projects/project__3/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                          img(
+                            src="img/projects/project__3/logo.png",
+                            alt=""
+                            )
+                        a(
+                        href="#",
+                        data-preview="img/projects/project__5/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                          img(
+                            src="img/projects/project__5/logo.png",
+                            alt=""
+                            )
+                        a(
+                        href="#",
+                        data-preview="img/projects/project__13/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                          img(
+                            src="img/projects/project__13/logo.png", 
+                            alt=""
+                            )
+                        a(
+                        href="#",
+                        data-preview="img/projects/project__8/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                          img(
+                            src="img/projects/project__8/logo.png", 
+                            alt=""
+                            )
+                        a(
+                        href="#",
+                        data-preview="img/projects/project__8/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                          img(
+                            src="img/projects/project__8/logo.png", 
+                            alt=""
+                            )
+                        a(
+                        href="#",
+                        data-preview="img/projects/project__13/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                          img(
+                            src="img/projects/project__13/logo.png", 
+                            alt=""
+                            )
+                        a(
+                        href="#",
+                        data-preview="img/projects/project__8/preview.jpg",
+                        data-name="",
+                        ).swiper-slide.project-slide.show__project
+                          img(
+                            src="img/projects/project__8/logo.png", 
+                            alt=""
+                            )              
+          
+          #services__screen.page__screen.screen
             .lines
             .noise
-            .screen__bg
-              video(
-                playsinline,
-                autoplay,
-                muted,
-                loop
-              )
-                source(
-                  src="assets/video/contacts.mp4",
-                  type="video/mp4",
-                  alt="Видео",
+            .screen__content
+              h2.screen__title.title__gradient(
+              data-swiper-parallax-x="70%",
+              data-swiper-parallax-opacity="0",
+              data-swiper-parallax-duration="700"
+              ) Услуги
+              .rates
+                .rates__item
+                  .rates__item-preview
+                    .rates__item-img
+                      img(
+                        src="img/svg/rates/icon__1_white.svg",
+                        alt="")
+                    .rates__item-title 
+                      h4 Одностраничный сайт <br> (Landing Page)
+                    .rates__item-price
+                      h4 от 299$
+                  .rates__item-description
+                    strong Кому подходит:
+                    .rates__item-short__info 
+                      ul
+                        li Бизнесам, которые продают один товар/услугу.
+                        li Бизнесам, клиенты которых склонны к импульсным покупкам. 
+                        li Тем, кому надо разработать сайт быстро и с минимальным участием в процессе 
+                        li Тем, кто хочет протестировать нишу/спрос
+                    .rates__item-more__info
+                      .more__development
+                        p Одностраничные сайты разрабатываются гораздо быстрее других сайтов. И первых клиентов можно получить буквально через неделю после старта работ.
+                        p От заказчика в процессе требуется меньше информации и зачастую в наполнении сайта его участие не нужно вовсе.
+                        p При формировании лендинг пейдж используются наиболее привлекательные и яркие цветовые решения, побудительные приемы к действию, размещение акций и скидок.  На сайте выстраивается логическая цепочка, которая вызывает у клиента непреодолимое желание заказать ваш товар или услугу. Конверсия грамотно разработанных одностраничников обычно существенно выше других видов сайтов.
+                      .more__advancing
+                        p Основные способы продвижения Landing Page – контекстная, тизерная и таргетированная реклама. SEO для одностраничных сайтов практически неприменимо.
+                    .rates__item-btns  
+                      a(
+                        href="#",
+                        
+                        data-subject="Хочу заказать - Landing Page"
+                        ).btn.btn-rates__btn.show__form Заказать
+                      a(
+                        href="#",
+                        data-icon="img/svg/rates/icon__1.svg",
+                        data-day="от 5 дней",
+                        ).rates__item-more__btn.show__more Подробнее
+
+                .rates__item
+                  .rates__item-preview
+                    .rates__item-img
+                      img(
+                        src="img/svg/rates/icon__2_white.svg",
+                        alt="")
+                    .rates__item-title 
+                      h4 Сайт-визитка/<br>Корпоративный сайт
+                    .rates__item-price
+                      h4 от 299$
+                  .rates__item-description
+                    strong Кому подходит:
+                    .rates__item-short__info
+                      ul
+                        li Почти всем, почти любые услуги/продукты можно представить с помощью сайта-визитки/корпоративного сайта. 
+                        li Подобный сайт может содержать любой вид и количество информации. 
+                        li Возможно наличие статичных страниц, новостей/статей/полезной информации, страницы «вопрос-ответ», отдельной страницы контактов и чего угодно еще.
+                    .rates__item-more__info
+                      .more__development
+                        p Как правило визитка/корпоративный сайт достаточно непросто наполнять. Потому как изначально нужно собрать/сгенерировать всю полноту информации, которую необходимо представить на сайте, затем грамотно ее структурировать, «задизайнить» и разместить.
+                      .more__advancing
+                        p У сайтов-визиток и корпоративных сайтов нет никаких ограничений на использование способов продвижения. Это могут быть все виды рекламы, продвижение в социальных сетях, SEO.  
+                    .rates__item-btns  
+                      a(
+                        href="#",
+                        data-subject="Хочу заказать - Корпоративный сайт"
+                        ).btn.btn-rates__btn.show__form Заказать
+                      a(
+                        href="#",
+                        data-icon="img/svg/rates/icon__2.svg",
+                        data-day="от 6 дней",
+                        ).rates__item-more__btn.show__more Подробнее
+
+                .rates__item
+                  .rates__item-preview
+                    .rates__item-img
+                      img(
+                        src="img/svg/rates/icon__3_white.svg",
+                        alt="")
+                    .rates__item-title 
+                      h4 Сайт-каталог<br>(Витрина)
+                    .rates__item-price
+                      h4 от 299$                    
+                  .rates__item-description
+                    strong Кому подходит:
+                    .rates__item-short__info
+                      ul
+                        li Компаниям с большим ассортиментом продукции.
+                        li Как правило, между каталогом и интернет-магазином выбор в пользу первого делают компании, работающие в сегменте B2B, а также компании, чьи товары лучше продаются по телефону/при личном контакте. 
+                        li В B2C каталоги актуальны для продукции, которую редко заказывают непосредственно с сайта (например, мебель).
+                    .rates__item-more__info
+                      .more__development
+                        p Сайт каталог – это полноценная витрина компании в интернете. Основная задача каталога – структурировать, подать информацию об ассортименте продукции компании и обеспечить удобную навигацию и поиск.
+                        p Сайт-каталог – это, как правило, довольно объемный сайт. И зачастую самый длительный этап разработки - это наполнение каталога. Тут нередко приходится прибегать к помощи контент-менеджеров и копирайтеров, настраивать импорт/экспорт и т.д.
+                      .more__advancing
+                        p Каталоги можно продвигать любыми из доступных способов. Стоит отметить, что наличие большого количества страниц, а также страниц, посвященных одному конкретному товару (карточек товара), делает каталог чуть ли не идеальным сайтом для SEO-продвижения. 
+                    .rates__item-btns  
+                      a(
+                        href="#",
+                        data-subject="Хочу заказать - Сайт-каталог"
+                        ).btn.btn-rates__btn.show__form Заказать
+                      a(
+                        href="#",
+                        data-icon="img/svg/rates/icon__3.svg",
+                        data-day="от 10 дней",
+                        ).rates__item-more__btn.show__more Подробнее
+
+                .rates__item
+                  .rates__item-preview
+                    .rates__item-img
+                      img(
+                        src="img/svg/rates/icon__4_white.svg",
+                        alt="")
+                    .rates__item-title 
+                      h4 Интернет-магазин
+                    .rates__item-price
+                      h4 от 299$                    
+                  .rates__item-description
+                    strong Кому подходит:
+                    .rates__item-short__info
+                      ul
+                      li Компаниям с большим ассортиментом продукции, которые хотят осуществлять продажу непосредственно с сайта. 
+                      li Чаще всего это B2C сегмент. 
+                    .rates__item-more__info
+                      .more__development
+                        p Интернет-магазин чуть дольше и дороже в разработке, чем сайт-каталог. Это обусловлено тем, что при создании интернет-магазина стоит довольно серьезная задача – обеспечить комфортный и понятный процесс заказа, выбор способов доставки и оплаты товара.
+                        p Стоит отметить, что интернет магазин – это один из самых сложных и многовариантных видов сайтов. В магазине может быть реализован сложный поиск, мультивалютность, фильтр по товарам, сравнение, интегрированы сервисы расчета стоимости доставки и сервисы онлайн-оплаты.
+                      .more__advancing
+                        p Интернет-магазин можно продвигать любыми из доступных способов: начиная от рекламы и заканчивая SEO-продвижением.
+                    .rates__item-btns  
+                      a(
+                        href="#",
+                        data-subject="Хочу заказать - Интернет-магазин"
+                        ).btn.btn-rates__btn.show__form Заказать
+                      a(
+                        href="#",
+                        data-icon="img/svg/rates/icon__4.svg",
+                        data-day="от 10 дней",
+                        ).rates__item-more__btn.show__more Подробнее
+
+            .screen__body
+              .screen__bg
+                .overlay
+                noscript.loading-lazy
+                  img(
+                    loading="lazy"
+                    src="img/img_2.jpg",
+                    alt="Картинка", 
                   data-swiper-parallax-scale="1.8",
-                  data-swiper-parallax="33%"
-                  )
+                  data-swiper-parallax="50%"
+                    )
+          
+          #step__screen.page__screen.screen
+            .lines
+            .noise
+            .screen__content
+              h3.screen__title(
+              data-swiper-parallax-x="70%",
+              data-swiper-parallax-opacity="0",
+              data-swiper-parallax-duration="700"
+              ) Этапы
+              .screen__text.screen__text-stages__text(
+              data-swiper-parallax-x="-45%",
+              data-swiper-parallax-opacity="0",
+              data-swiper-parallax-duration="1200"
+              )
+                p После того, как менеджер провел с вами консультацию, был определен тариф, подписан договор и проведена оплата, мы приступаем к созданию сайта.
+              
+              .stages
+                .stage(
+                  
+                  )              
+                  .stage__number Шаг I
+                  .stage__content 
+                    p Проект-менеджер отправляет вам:
+                    ul
+                      li бриф (оформление сайта)
+                      li анкету для наполнения контентом
+                      li анкету на домен
+                .stage(
+                  )               
+                  .stage__number Шаг II
+                  .stage__content 
+                    p Утвержденный вариант сайта мы заполняем предоставленным вами контентом.
+                .stage(
+                  )                
+                  .stage__number Шаг III
+                  .stage__content 
+                    p Подключаем готовый сайт к домену, тестируем и публикуем в интернете 
+                .stage(
+                  )                 
+                  .stage__number Шаг V
+                  .stage__content 
+                    p Наши специалисты регистрируют сайт в поисковых системах (Yandex, Google и Mail.ru), размещают счетчик посещаемости. 
+                .stage(
+                  )                
+                  .stage__number Шаг IV
+                  .stage__content 
+                    p После запуска мы дополнительно консультируем о возможностях продвижения вашего сайта в интернете.
+          
+                a.btn.btn-project__btn.show__form(href="$") Заказать проект
+              
+          #contact__screen.page__screen.screen
+            .lines
+            .noise
+            .screen__content.screen__content-bg
+              h3.screen__title.title__gradient(
+              data-swiper-parallax-x="70%",
+              data-swiper-parallax-opacity="0",
+              data-swiper-parallax-duration="700"
+              ) Контакты
+              .screen__wrapp(
+              )
+                .screen__col.contact__col(
+              )
+                  .footer__link-title Phones:
+                  .contacts__link.footer__link
+                    a(href="tel:+375123456789") +375123456789
+                    a(href="tel:+375123456789") +375123456789
+                  .footer__link-title Email:
+                  .contacts__link.footer__link
+                    a(href="mailto:email@gmail.com") email@gmail.com
+                  .footer__link-title Social:
+                  .contacts__link.social__link
+                    a.contact__icon(href="https://t.me/Lea_need") 
+                      i.fab.fa-telegram-plane
+                    a.contact__icon.contact__icon-desktop(href="viber://chat?number=+375259085861") 
+                      i.fab.fa-viber
+                    a.contact__icon.contact__icon-mobile(href="viber://add?number=375259085861")
+                      i.fab.fa-viber
+                    a.contact__icon(href="tel:+375259085861")
+                      i.fas.fa-mobile-alt
+                    a.contact__icon(href=":mailto:email@gmail.com")
+                      i.far.fa-envelope
+        
+                form(action="").screen__col.contact__form.contact__col
+                  .contact__form-title Остались вопросы? <br> Напишите нам и мы свяжемся с вами в кратчайшие сроки! 
+                  input#contact__Name.contact__input(
+                    type="text", 
+                    name="Имя",
+                    placeholder="Ваше имя"
+                    )
+  
+                  input#contact__phone.contact__input.telephone(
+                    type="tel", 
+                    name="Телефон",
+                    placeholder="Ваше телефон"
+                    )
+                  
+                  input#contact__email.contact__input(
+                    type="email", 
+                    name="Телефон",
+                    placeholder="Ваш email"
+  )
+                  label.btn.contact__btn(for="contact__submit") Отправить
+                  input#contact__submit(type="submit", value="")
+            .screen__body
+              .screen__bg
+                video(
+                  playsinline,
+                  autoplay,
+                  muted,
+                  loop,
+                  data-swiper-parallax-scale="1.8",
+                  data-swiper-parallax="50%"
+                )
+                  source(
+                    src="assets/video/contacts.mp4",
+                    type="video/mp4",
+                    alt="Видео",
+                    data-swiper-parallax-scale="1.8",
+                    data-swiper-parallax="33%"
+                    )
+        
+        .link__wrap
+          a.contact__icon(href="https://t.me/Lea_need") 
+            i.fab.fa-telegram-plane
+          a.contact__icon.contact__icon-desktop(href="viber://chat?number=+375259085861") 
+            i.fab.fa-viber
+          a.contact__icon.contact__icon-mobile(href="viber://add?number=375259085861")
+            i.fab.fa-viber
+          a.contact__icon(href="tel:+375259085861")
+            i.fas.fa-mobile-alt
+          a.contact__icon(href=":mailto:email@gmail.com")
+            i.far.fa-envelope
+        
+        .page__pagination
+        
+        .page__scroll    
       
-      .link__wrap
-        a.contact__icon(href="https://t.me/Lea_need") 
-          i.fab.fa-telegram-plane
-        a.contact__icon.contact__icon-desktop(href="viber://chat?number=+375259085861") 
-          i.fab.fa-viber
-        a.contact__icon.contact__icon-mobile(href="viber://add?number=375259085861")
-          i.fab.fa-viber
-        a.contact__icon(href="tel:+375259085861")
-          i.fas.fa-mobile-alt
-        a.contact__icon(href=":mailto:email@gmail.com")
-          i.far.fa-envelope
+      include includes/footer.pug
       
-      .page__pagination
-      
-      .page__scroll    
-    
-    include includes/footer.pug

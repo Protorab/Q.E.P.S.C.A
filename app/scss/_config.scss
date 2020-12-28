@@ -1,13 +1,13 @@
 // USER VARIABLES SECTION
 
-$accent: rgb(191, 126, 157); // Accent Color
+$accent: #bf7e9d; // Accent Color
 $accentSecond: rgb(28, 37, 62); // Accent second Color
 $accentSecondOpacity: rgba(28, 37, 62, 0.5); // Accent second Color
 $accentOpacity:rgba(191, 126, 157, 0.5); // Accent Color Opacity 0.5
-$mainColor:#f2bca8; // Body Background Color
+$mainColor:#ff9771; // Body Background Color
 $mainColorOpacity:rgba(242, 188, 168, .5); // Body Background Color Opacity 0.5
 $fontsize: 10px; // Body Font Size
-$textcolor: rgb(28, 37, 62); // Text Color
+$textcolor: #1c253e; // Text Color
 $textAltColor: rgb(217, 158, 106); // Text Dark  Color
 $lineheight: 1.65; // Document Line Height
 $userfont: 'PressStart2P',
@@ -198,7 +198,7 @@ $maxWidthContainer:1170;
 // GENERAL DOCUMENT STYLES
 
 ::placeholder {
-	color: $textAltColor;
+	color: $textcolor;
 }
 
 ::selection {

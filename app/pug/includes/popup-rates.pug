@@ -3,3 +3,37 @@
   .popup__more.animate__animated(action="")
     .close.project__close
       span
+    .popup__more-side
+      .popup__more-icon
+        img#more__icon(
+          src="", 
+          alt=""
+          )
+      .popup__more-detail
+        .popup__more-detail__item
+          .popup__more-detail__img
+            img(
+              src="img/svg/icon__money.svg",
+              alt="стоимость"
+              )
+          span#more__price 
+        .popup__more-detail__item
+          .popup__more-detail__img
+            img(
+              src="img/svg/icon__calendar.svg",
+              alt="срок разработки"
+              )
+          span#more__day 
+    .popup__more-main
+      h4.popup__more-title#more__title Интернет-магазин
+      h5.popup__more-title Кому подходит:
+      #rates__list.popup__more-text
+      h5.popup__more-title Особенности разработки
+      #development__text.popup__more-text
+      h5.popup__more-title Особенности продвижения
+      #advancing__text.popup__more-text
+
+      a(
+        href="#",
+        data-subject=""
+        )#rates__order.btn.btn-more__btn.show__form Заказать

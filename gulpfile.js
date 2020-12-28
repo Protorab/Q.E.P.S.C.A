@@ -60,7 +60,7 @@ function browsersync() {
     server: {
       baseDir: "./" + distFolder + "/",
     },
-    
+
     notify: false,
     online: true,
   });
@@ -219,5 +219,5 @@ exports.default = series(
   scripts,
   images,
   styles,
-  parallel(browsersync, startwatch, assets, fonts, html, pugFunc)
+  parallel(startwatch, assets, fonts, html, pugFunc, browsersync)
 );

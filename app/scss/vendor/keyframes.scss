@@ -28,6 +28,79 @@
   }
 }
 
+@keyframes rgbBox {
+  0% {
+    box-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6),
+      1px -1px 8px rgba(211, 221, 245, .7),
+      0px 0 1px rgba(250, 130, 240, 0.8),
+      0 0px 3px rgba(115, 220, 225, 0.8),
+      0px 0 3px rgba(125, 255, 130, 0.8),
+      0 0px 3px rgba(250, 145, 165, .8),
+      0px 0 3px rgba(160, 150, 245, .8);
+  }
+
+  25% {
+    box-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6),
+      1px -1px 8px rgba(211, 221, 245, .7),
+      0px 0 1px rgba(250, 130, 240, 0.8),
+      0 0px 3px rgba(115, 220, 225, 0.8),
+      0px 0 3px rgba(125, 255, 130, 0.8),
+      0 0px 3px rgba(250, 145, 165, .8),
+      0px 0 3px rgba(160, 150, 245, .8);
+  }
+
+  45% {
+    box-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6),
+      1px -1px 8px rgba(211, 221, 245, .7),
+      5px 0 1px rgba(250, 130, 240, 0.8),
+      0 5px 1px rgba(115, 220, 225, 0.8),
+      -5px 0 1px rgba(125, 255, 130, 0.8),
+      0 -5px 1px rgba(250, 145, 165, .8),
+      5px 0 1px rgba(160, 150, 245, .8);
+  }
+
+  50% {
+    box-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6),
+      1px -1px 8px rgba(211, 221, 245, .7),
+      -5px 0 1px rgba(250, 130, 240, 0.8),
+      0 -5px 1px rgba(115, 220, 225, 0.8),
+      5px 0 1px rgba(125, 255, 130, 0.8),
+      0 5px 1px rgba(250, 145, 165, .8),
+      -5px 0 1px rgba(160, 150, 245, .8);
+  }
+
+  55% {
+    box-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6),
+      1px -1px 8px rgba(211, 221, 245, .7),
+      0px 0 3px rgba(250, 130, 240, 0.8),
+      0 0px 3px rgba(115, 220, 225, 0.8),
+      0px 0 3px rgba(125, 255, 130, 0.8),
+      0 0px 3px rgba(250, 145, 165, .8),
+      0px 0 3px rgba(160, 150, 245, .8);
+  }
+
+  90% {
+    box-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6),
+      1px -1px 8px rgba(211, 221, 245, .7),
+      -5px 0 1px rgba(250, 130, 240, 0.8),
+      0 5px 1px rgba(115, 220, 225, 0.8),
+      5px 0 1px rgba(125, 255, 130, 0.8),
+      0 -5px 1px rgba(250, 145, 165, .8),
+      5px 0 1px rgba(160, 150, 245, .8);
+  }
+
+  100% {
+    box-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6),
+      1px -1px 8px rgba(211, 221, 245, .7),
+      5px 0 1px rgba(250, 130, 240, 0.8),
+      0 -5px 1px rgba(115, 220, 225, 0.8),
+      -5px 0 1px rgba(125, 255, 130, 0.8),
+      0 5px 1px rgba(244, 45, 0, 0.8),
+      -5px 0 1px rgba(160, 150, 245, .8);
+  }
+}
+
+
 @keyframes noise {
 
   0%,
@@ -177,5 +250,29 @@
     // border-left: dashed 2px $accentSecond;
     // border-top: dashed 2px $accentSecond;
     // border-right: dashed 2px $accentSecond;
+  }
+}
+
+@-webkit-keyframes slideme {
+  0% {
+    left: -50%;
+
+  }
+
+
+  25% {
+    left: 50%;
+  }
+
+  50% {
+    left: 100%;
+  }
+
+  75% {
+    left: 150%;
+  }
+
+  100% {
+    left: 200%;
   }
 }

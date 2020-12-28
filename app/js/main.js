@@ -6,7 +6,7 @@
 // window.$ = $;
 // import wow from "wowjs";
 import Swiper from "./vendor/swiper-bundle.min.js";
-import inputmask from "inputmask";
+import Inputmask from "inputmask";
 import loadingAttributePolyfill from "loading-attribute-polyfill";
 // require("./vendor/mail.js");
 // require("./vendor/swiper-bundle.min.js");
@@ -35,7 +35,19 @@ phoneMask.mask(phone);
 //     console.log("callback - particles-js config loaded");
 //   }
 // );
+
 document.addEventListener("DOMContentLoaded", () => {
+  const showMore = document.querySelectorAll(".show__more");
+  const popupRates = document.querySelector(".popup__rates");
+  const ratesMore = document.querySelector(".popup__more");
+  const ratesDevelopment = document.querySelector("#development__text");
+  const ratesAdvancing = document.querySelector("#advancing__text");
+  const ratesTitle = document.querySelector("#more__title");
+  const ratesDay = document.querySelector("#more__day");
+  const ratesPrice = document.querySelector("#more__price");
+  const ratesIcon = document.querySelector("#more__icon");
+  const ratesList = document.querySelector("#rates__list");
+  const ratesOrder = document.querySelector("#rates__order");
   const popupProject = document.querySelector(".popup__project");
   const projectPreview = document.querySelector(".project__preview");
   const projectPreviewImg = document.querySelector("#project__img");
@@ -46,95 +58,151 @@ document.addEventListener("DOMContentLoaded", () => {
   const showForm = document.querySelectorAll(".show__form");
   const closePopup = document.querySelectorAll(".close");
   const body = document.querySelector("body");
+  let moreDevelopment,
+    moreAdvancing,
+    moreList,
+    moreTitle,
+    morePrice,
+    moreIcon,
+    moreDay;
 
   function popupToggle(
-    el1,
-    el2,
-    el1ShowClass,
-    el2ShowClass,
-    el1HideClass,
-    el2HideClass
+    popUp,
+    popUpElement,
+    el1ShowClassAdd,
+    el2ShowClassAdd,
+    el1HideClassRemove,
+    el2HideClassRemove,
+    state,
+    timing
   ) {
-    el1.classList.add(el1ShowClass);
-    el1.classList.remove(el1HideClass);
-    el2.classList.remove(el2HideClass);
-    el2.classList.add(el2ShowClass);
+    popUp.classList.add(el1ShowClassAdd);
+    popUp.classList.remove(el1HideClassRemove);
+    popUpElement.classList.remove(el2HideClassRemove);
+    popUpElement.classList.add(el2ShowClassAdd);
     body.classList.toggle("__fixed");
-  }
-  function formShow() {
-    popupToggle(
-      popupForm,
-      formPopup,
-      "animate__fadeIn",
-      "animate__backInDown",
-      "animate__fadeOut",
-      "animate__backOutUp"
-    );
     setTimeout(function FormFadeIn() {
-      popupForm.style.display = "flex";
-    }, 100);
+      popUp.style.display = state;
+    }, timing);
   }
-  function formHide() {
-    popupToggle(
-      popupForm,
-      formPopup,
-      "animate__fadeOut",
-      "animate__backOutUp",
-      "animate__fadeIn",
-      "animate__backInDown"
-    );
-    setTimeout(function FormFadeOut() {
-      popupForm.style.display = "none";
-    }, 1000);
-  }
+
   showForm.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       let subject = this.dataset.subject;
       console.log(subject);
       e.preventDefault();
-      formShow();
+      popupToggle(
+        popupForm,
+        formPopup,
+        "animate__fadeIn",
+        "animate__bounceInDown",
+        "animate__fadeOut",
+        "animate__bounceOutUp",
+        "flex",
+        100
+      );
     });
   });
-  function projectShow() {
-    popupToggle(
-      popupProject,
-      projectPreview,
-      "animate__fadeIn",
-      "animate__bounceIn",
-      "animate__fadeOut",
-      "animate__bounceOut"
-    );
-    setTimeout(function FormFadeIn() {
-      popupProject.style.display = "flex";
-    }, 100);
+  if (showMore) {
+    showMore.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        moreIcon = this.dataset.icon;
+        moreDay = this.dataset.day;
+        moreDevelopment = this.parentElement.parentElement.querySelector(
+          ".more__development"
+        );
+        morePrice = this.parentElement.parentElement.parentElement.querySelector(
+          ".rates__item-price h4"
+        );
+        moreTitle = this.parentElement.parentElement.parentElement.querySelector(
+          ".rates__item-title h4"
+        );
+        moreAdvancing = this.parentElement.parentElement.querySelector(
+          ".more__advancing"
+        );
+        moreList = this.parentElement.parentElement.querySelector(
+          ".rates__item-short__info"
+        );
+        ratesOrder.dataset.subject = "Хочу заказать " + moreTitle.textContent;
+        ratesIcon.src = moreIcon;
+        ratesDay.innerHTML = moreDay;
+        ratesList.innerHTML = moreList.innerHTML;
+        ratesTitle.innerHTML = moreTitle.textContent;
+        ratesPrice.innerHTML = morePrice.textContent;
+        ratesDevelopment.innerHTML = moreDevelopment.innerHTML;
+        ratesAdvancing.innerHTML = moreAdvancing.innerHTML;
+
+        popupToggle(
+          popupRates,
+          ratesMore,
+          "animate__fadeIn",
+          "animate__bounceInDown",
+          "animate__fadeOut",
+          "animate__bounceOutUp",
+          "flex",
+          100
+        );
+        e.preventDefault();
+      });
+    });
   }
-  function projectHide() {
-    popupToggle(
-      popupProject,
-      projectPreview,
-      "animate__fadeOut",
-      "animate__bounceOut",
-      "animate__fadeIn",
-      "animate__bounceIn"
-    );
-    setTimeout(function FormFadeOut() {
-      popupProject.style.display = "none";
-    }, 1000);
-  }
-  function popupHide() {
+
+  function popupClose() {
     if (window.getComputedStyle(popupForm).display === "flex") {
-      formHide();
+      // popupHide(popupForm, formPopup);
+      popupToggle(
+        popupForm,
+        formPopup,
+        "animate__fadeOut",
+        "animate__bounceOutUp",
+        "animate__fadeIn",
+        "animate__bounceInDown",
+        "none",
+        1000
+      );
     }
     if (window.getComputedStyle(popupProject).display === "flex") {
-      projectHide();
+      // popupHide(popupProject, projectPreview);
+      popupToggle(
+        popupProject,
+        projectPreview,
+        "animate__fadeOut",
+        "animate__bounceOutUp",
+        "animate__fadeIn",
+        "animate__bounceInDown",
+        "none",
+        1000
+      );
+    }
+    if (window.getComputedStyle(popupRates).display === "flex") {
+      // popupHide(popupRates, ratesMore);
+      popupToggle(
+        popupRates,
+        ratesMore,
+        "animate__fadeOut",
+        "animate__bounceOutUp",
+        "animate__fadeIn",
+        "animate__bounceInDown",
+        "none",
+        1000
+      );
     }
   }
+
   showProject.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       let preview = this.dataset.preview;
       projectPreviewImg.src = preview;
-      console.log(preview);
-      projectShow();
+      popupToggle(
+        popupProject,
+        projectPreview,
+        "animate__fadeIn",
+        "animate__bounceInDown",
+        "animate__fadeOut",
+        "animate__bounceOutUp",
+        "flex",
+        100
+      );
       e.preventDefault();
     });
   });
@@ -142,21 +210,25 @@ document.addEventListener("DOMContentLoaded", () => {
   popupBg.forEach(function (closeBtn) {
     closeBtn.addEventListener("click", function (e) {
       e.preventDefault();
-      popupHide();
+      popupClose();
     });
   });
+
   closePopup.forEach(function (close) {
     close.addEventListener("click", function (e) {
-      popupHide();
+      popupClose();
       e.preventDefault();
     });
   });
+
   document.addEventListener("keydown", function (event) {
     if (event.keyCode === 27) {
-      popupHide();
+      popupClose();
     }
   });
+
   let touchMove;
+
   if (
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
@@ -170,6 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("not mobile device");
     touchMove = false;
   }
+
   const wrapper = document.querySelector(".wrapper");
   const pageSlider = new Swiper(".page", {
     // переопределить классы
@@ -226,6 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
+
   const menuLinks = document.querySelectorAll(".menu__link");
   function menuSlider() {
     if (menuLinks.length > 0) {
@@ -241,12 +315,14 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
+
   function menuSliderRemoveClass() {
     const menuLinkActive = document.querySelector(".menu__link.__active");
     if (menuLinkActive) {
       menuLinkActive.classList.remove("__active");
     }
   }
+
   function setScrollType() {
     if (wrapper.classList.contains("__free")) {
       wrapper.classList.remove("__free");
@@ -266,6 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   pageSlider.init();
+
   const projectHorisontal = new Swiper(".project", {
     effect: "cube",
     rtl: true,
@@ -284,6 +361,7 @@ document.addEventListener("DOMContentLoaded", () => {
       disableOnInteraction: false,
     },
   });
+
   const projectVertical = new Swiper(".project__vertical", {
     effect: "cube",
 
@@ -302,10 +380,4 @@ document.addEventListener("DOMContentLoaded", () => {
       disableOnInteraction: false,
     },
   });
-  // projectHorisontal.addEventListener("mouseenter", (e) => {
-  //   projectHorisontal.autoplay.stop();
-  // });
-  // projectHorisontal.addEventListener("mouseleave", (e) => {
-  //   projectHorisontal.autoplay.start();
-  // });
 });
