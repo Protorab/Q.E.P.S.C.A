@@ -250,11 +250,12 @@ document.addEventListener("DOMContentLoaded", () => {
     slideClass: "page__screen",
     //задать направление
     direction: "vertical",
+    freMode: true,
     // количество слайдов для показа
     slidesPerView: "auto",
     // включение параллакс
     parallax: true,
-
+    autoHeight: true,
     keyboard: {
       enabled: true,
       onlyInViewport: true,
@@ -332,9 +333,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const pageSlide = pageSlider.slides[i];
       const pageSlideContent = pageSlide.querySelector(".screen__content");
       if (pageSlideContent) {
-        const pageSlideContentHeight = pageSlideContent.offsetHeight;
+        const pageSlideContentHeight = pageSlideContent.clientHeight;
         console.log(pageSlideContentHeight);
-        if (pageSlideContentHeight > window.innerHeight) {
+        if (pageSlideContentHeight > document.documentElement.clientHeight) {
           pageSlider.params.freMode = true;
           wrapper.classList.add("__free");
           console.log("free");
