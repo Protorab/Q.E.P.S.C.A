@@ -445,20 +445,19 @@ h,
 
 	@media only screen and (max-width : 1440px) {
 		&1 {
-			font-size: 4.8rem;
-		}
-
-		&2 {
-			font-size: 4rem;
-		}
-
-		&3 {
 			font-size: 3.8rem;
 		}
 
-		&4 {
-			font-size: 2.3rem;
+		&2 {
+			font-size: 3rem;
+		}
 
+		&3 {
+			font-size: 1.8rem;
+		}
+
+		&4 {
+			font-size: 1.6rem;
 		}
 	}
 
@@ -522,3 +521,31 @@ label {
 	}
 
 }
+
+@media screen and (max-width : 900px) and (orientation:landscape) {}
+
+@media only screen and (max-width : 1920px) {}
+
+@media only screen and (max-width : 1680px) {}
+
+@media only screen and (max-width : 1600px) {}
+
+@media only screen and (max-width : 1440px) {}
+
+@media only screen and (max-width : 1369px) {}
+
+@media only screen and (max-width : 1280px) {}
+
+@media only screen and (max-width : 1024px) {}
+
+@media only screen and (max-width : 800px) {}
+
+@media only screen and (max-width : 768px) {}
+
+@media only screen and (max-width : 600px) {}
+
+@media only screen and (max-width : 533px) {}
+
+@media only screen and (max-width : 360px) {}
+
+@media only screen and (max-width : 320px) {}

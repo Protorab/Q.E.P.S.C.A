@@ -261,15 +261,15 @@ document.addEventListener("DOMContentLoaded", () => {
       pageUpDown: true,
     },
     mousewheel: {
-      sensitivity: 1,
+      // sensitivity: 1,
       releaseOnEdges: false,
     },
     allowTouchMove: touchMove,
-    watchOverflow: true,
+    // watchOverflow: true,
     speed: 800,
-    observer: true,
-    observeParents: true,
-    observeSlideChildren: true,
+    // observer: true,
+    // observeParents: true,
+    // observeSlideChildren: true,
 
     pagination: {
       el: ".page__pagination",
@@ -333,14 +333,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const pageSlideContent = pageSlide.querySelector(".screen__content");
       if (pageSlideContent) {
         const pageSlideContentHeight = pageSlideContent.offsetHeight;
+        console.log(pageSlideContentHeight);
         if (pageSlideContentHeight > window.innerHeight) {
-          wrapper.classList.add("__free");
           pageSlider.params.freMode = true;
+          wrapper.classList.add("__free");
+          console.log("free");
           break;
         }
       }
     }
   }
+
   pageSlider.init();
 
   const projectHorisontal = new Swiper(".project", {
